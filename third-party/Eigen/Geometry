@@ -1,0 +1,59 @@
+// This file is part of Eigen, a lightweight C++ template library
+// for linear algebra.
+//
+// This Source Code Form is subject to the terms of the Mozilla
+// Public License v. 2.0. If a copy of the MPL was not distributed
+// with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+#ifndef EIGEN_GEOMETRY_MODULE_H
+#define EIGEN_GEOMETRY_MODULE_H
+
+#include "Core"
+
+#include "SVD"
+#include "LU"
+#include <limits>
+
+#include "src/Core/util/DisableStupidWarnings.hpp"
+
+/** \defgroup Geometry_Module Geometry module
+  *
+  * This module provides support for:
+  *  - fixed-size homogeneous transformations
+  *  - translation, scaling, 2D and 3D rotations
+  *  - \link Quaternion quaternions \endlink
+  *  - cross products (\ref MatrixBase::cross, \ref MatrixBase::cross3)
+  *  - orthognal vector generation (\ref MatrixBase::unitOrthogonal)
+  *  - some linear components: \link ParametrizedLine parametrized-lines \endlink and \link Hyperplane hyperplanes \endlink
+  *  - \link AlignedBox axis aligned bounding boxes \endlink
+  *  - \link umeyama least-square transformation fitting \endlink
+  *
+  * \code
+  * #include <Eigen/Geometry>
+  * \endcode
+  */
+
+#include "src/Geometry/OrthoMethods.hpp"
+#include "src/Geometry/EulerAngles.hpp"
+
+#include "src/Geometry/Homogeneous.hpp"
+#include "src/Geometry/RotationBase.hpp"
+#include "src/Geometry/Rotation2D.hpp"
+#include "src/Geometry/Quaternion.hpp"
+#include "src/Geometry/AngleAxis.hpp"
+#include "src/Geometry/Transform.hpp"
+#include "src/Geometry/Translation.hpp"
+#include "src/Geometry/Scaling.hpp"
+#include "src/Geometry/Hyperplane.hpp"
+#include "src/Geometry/ParametrizedLine.hpp"
+#include "src/Geometry/AlignedBox.hpp"
+#include "src/Geometry/Umeyama.hpp"
+
+// Use the SSE optimized version whenever possible.
+#if (defined EIGEN_VECTORIZE_SSE) || (defined EIGEN_VECTORIZE_NEON)
+#include "src/Geometry/arch/Geometry_SIMD.hpp"
+#endif
+
+#include "src/Core/util/ReenableStupidWarnings.hpp"
+
+#endif // EIGEN_GEOMETRY_MODULE_H

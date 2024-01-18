@@ -1,0 +1,68 @@
+// This file is part of Eigen, a lightweight C++ template library
+// for linear algebra.
+//
+// This Source Code Form is subject to the terms of the Mozilla
+// Public License v. 2.0. If a copy of the MPL was not distributed
+// with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+#ifndef EIGEN_SPARSECORE_MODULE_H
+#define EIGEN_SPARSECORE_MODULE_H
+
+#include "Core"
+
+#include "src/Core/util/DisableStupidWarnings.hpp"
+
+#include <vector>
+#include <map>
+#include <cstdlib>
+#include <cstring>
+#include <algorithm>
+
+/** 
+  * \defgroup SparseCore_Module SparseCore module
+  *
+  * This module provides a sparse matrix representation, and basic associated matrix manipulations
+  * and operations.
+  *
+  * See the \ref TutorialSparse "Sparse tutorial"
+  *
+  * \code
+  * #include <Eigen/SparseCore>
+  * \endcode
+  *
+  * This module depends on: Core.
+  */
+
+#include "src/SparseCore/SparseUtil.hpp"
+#include "src/SparseCore/SparseMatrixBase.hpp"
+#include "src/SparseCore/SparseAssign.hpp"
+#include "src/SparseCore/CompressedStorage.hpp"
+#include "src/SparseCore/AmbiVector.hpp"
+#include "src/SparseCore/SparseCompressedBase.hpp"
+#include "src/SparseCore/SparseMatrix.hpp"
+#include "src/SparseCore/SparseMap.hpp"
+#include "src/SparseCore/SparseVector.hpp"
+#include "src/SparseCore/SparseRef.hpp"
+#include "src/SparseCore/SparseCwiseUnaryOp.hpp"
+#include "src/SparseCore/SparseCwiseBinaryOp.hpp"
+#include "src/SparseCore/SparseTranspose.hpp"
+#include "src/SparseCore/SparseBlock.hpp"
+#include "src/SparseCore/SparseDot.hpp"
+#include "src/SparseCore/SparseRedux.hpp"
+#include "src/SparseCore/SparseView.hpp"
+#include "src/SparseCore/SparseDiagonalProduct.hpp"
+#include "src/SparseCore/ConservativeSparseSparseProduct.hpp"
+#include "src/SparseCore/SparseSparseProductWithPruning.hpp"
+#include "src/SparseCore/SparseProduct.hpp"
+#include "src/SparseCore/SparseDenseProduct.hpp"
+#include "src/SparseCore/SparseSelfAdjointView.hpp"
+#include "src/SparseCore/SparseTriangularView.hpp"
+#include "src/SparseCore/TriangularSolver.hpp"
+#include "src/SparseCore/SparsePermutation.hpp"
+#include "src/SparseCore/SparseFuzzy.hpp"
+#include "src/SparseCore/SparseSolverBase.hpp"
+
+#include "src/Core/util/ReenableStupidWarnings.hpp"
+
+#endif // EIGEN_SPARSECORE_MODULE_H
+
