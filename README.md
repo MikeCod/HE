@@ -1,6 +1,5 @@
 # Homomorphic encryption
 
-
 ## Introduction
 
 #### What is homomorphic encryption?
@@ -76,4 +75,4 @@ g++ example.cpp -lhehub -Wall
 
 ## Copyrights
 
-This library is an improvements of this repository by [PrimiHub](https://github.com/primihub/hehub).
+This library is an improvement of [this repository by PrimiHub](https://github.com/primihub/hehub).
